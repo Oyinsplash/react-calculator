@@ -19,13 +19,6 @@ const OutputStyle = styled.div`
   }
 `;
 
-// const OutputStyle = styled(Output)`
-//   width: 100%;
-//   input {
-//     font-size: ${(props) => (props.large ? "20px" : "16px")};
-//     color: red;
-//     text-align: right;
-//     width: 100%;
-//   }
+
 
 export default Output;

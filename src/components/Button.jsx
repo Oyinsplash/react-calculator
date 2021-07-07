@@ -1,8 +1,7 @@
 import React from "react";
 
 import styled from "styled-components";
-// import DataContext from "../Data";
-
+import helper from '../helper';
 function Button(props) {
 
   const handleClick = (e) => {
@@ -11,7 +10,7 @@ function Button(props) {
       if (props.input !== "") {
         let res = "";
         try {
-          res = eval(props.input);
+            res = helper(props.input);
         } catch (error) {
           props.setOutput("Math Error");
         }
@@ -59,7 +58,6 @@ const ButtonStyle = styled(Button)`
   width: calc(100%);
   height: 100%;
   cursor: pointer;
-  /* box-shadow: -2px -2px 10px rgb(127, 115, 201); */
   input {
     background: transparent;
     width: 100%;
@@ -68,11 +66,7 @@ const ButtonStyle = styled(Button)`
     outline: none;
   }
   border: 1px solid #87d;
-  /* border: 1px solid #226; */
   box-sizing: border-box;
-  /* :hover {
-    animation: press 1s;
-  } */
   :focus {
     animation: press 1s;
   }

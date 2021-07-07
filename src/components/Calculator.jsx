@@ -2,18 +2,12 @@ import React, { useState } from "react";
 import Button from "./Button";
 import styled from "styled-components";
 import CalcScreen from "./CalcScreen";
-import DataContext from "../Data";
 
-const data = {
-  output: "",
-  input: "0",
-};
 function Calculator(props) {
   const [input, setInput] = useState("0");
   const [output, setOutput] = useState("");
 
   return (
-    <DataContext.Provider value={data}>
       <Phone>
         <PhoneScreen>
           <CalcScreen user={input} result={output} />
@@ -190,7 +184,6 @@ function Calculator(props) {
           <HomeButton></HomeButton>
         </Home>
       </Phone>
-    </DataContext.Provider>
   );
 }
 const Phone = styled.div`
